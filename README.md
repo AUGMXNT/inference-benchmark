@@ -1,7 +1,16 @@
 We will use `shisa-7b` to test inference performance
 
-Full file:
+Full spreadsheet:
 https://docs.google.com/spreadsheets/d/19YaxXkMJu7VweJihBMxQfMuz290Q3VxpqeG2DYCdRws/edit?usp=sharing
+
+All tests run on a Ryzen 5950X workstation w/ an RTX 4090 and RTX 3090 w/ CUDA 12.3.1 ~ 2023-12-10
+
+* Python 3.11.5
+* HF Transfromers 4.35.2
+* vLLM 0.2.3
+* cTranslate2 3.23.0
+* llama.cpp fe680e3 (1620)
+* ExLlamaV2 0.0.10
 
 | Software        | Settings                              | Avg Tok/s   | Max Mem   | Speed X   | Max mem %          | Notes                                                                                                                                          |
 |:----------------|:--------------------------------------|:------------|:----------|:----------|:-------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------|
@@ -78,4 +87,4 @@ https://docs.google.com/spreadsheets/d/19YaxXkMJu7VweJihBMxQfMuz290Q3VxpqeG2DYCd
 | MLC LLM         | q8f16_1                               |             |           |           |                    |                                                                                                                                                |
 | MLC LLM         | q4f16_1                               |             |           |           |                    | mlc_chat_cli: symbol lookup error: ... mlc-llm/dist/shisa-7b-v1-q4f16_1/shisa-7b-v1-q4f16_1-cuda.so: undefined symbol: __cudaRegisterFatBinary |
 | MLC LLM         | autogptq_llama_q4f16_1                |             |           |           |                    |                                                                                                                                                |
-| gpt-fast        |                                       |             |           |           |                    |                                                                                                                                                |
+| gpt-fast        |                                       |             |           |           |                    | many issues...                                                                                                                                               |
