@@ -1,7 +1,9 @@
-We will use `shisa-7b` to test inference performance
+We will use [shisa-7b-v1](https://huggingface.co/augmxnt/shisa-7b-v1) (Mistral 7B w/ extended tokenizer) to test inference performance.
 
 Full spreadsheet:
 https://docs.google.com/spreadsheets/d/19YaxXkMJu7VweJihBMxQfMuz290Q3VxpqeG2DYCdRws/edit?usp=sharing
+
+512 token prompt, 512 tokens generated
 
 All tests run on a Ryzen 5950X workstation w/ an RTX 4090 and RTX 3090 w/ CUDA 12.3.1 ~ 2023-12-10
 
